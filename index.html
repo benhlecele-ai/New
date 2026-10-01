@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0F172A" />
+  <meta name="description" content="RYCON Civils & Electrical — Construction, Solar & Electrical Specialists delivering reliable, compliant and professional solutions." />
+  <title>RYCON Civils & Electrical | Construction • Solar • Electrical</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#0B1120',
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155'
+            },
+            gold: '#D4AF37',
+            'gold-light': '#EAB308'
+          },
+          boxShadow: {
+            gold: '0 12px 35px rgba(212,175,55,.18)',
+            navy: '0 15px 45px rgba(15,23,42,.18)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0F172A;
+      --navy-2: #1E293B;
+      --gold: #D4AF37;
+      --gold-bright: #EAB308;
+      --paper: #F8FAFC;
+      --line: #E2E8F0;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--paper);
+      color: var(--navy);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .brand-font {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .section-anchor { scroll-margin-top: 100px; }
+
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+
+    .hero-overlay {
+      background:
+        linear-gradient(105deg, rgba(11,17,32,.98) 0%, rgba(15,23,42,.94) 52%, rgba(15,23,42,.76) 100%);
+    }
+
+    .gold-rule {
+      width: 58px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+    }
+
+    .service-card {
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(212,175,55,.65);
+      box-shadow: 0 20px 45px rgba(15,23,42,.13);
+    }
+
+    .cta-hover {
+      transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+    }
+
+    .cta-hover:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 12px 30px rgba(212,175,55,.18);
+    }
+
+    .input-field {
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+
+    .input-field:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(212,175,55,.12);
+      outline: none;
+    }
+
+    .fab-pulse {
+      animation: pulseRing 2.4s infinite;
+    }
+
+    @keyframes pulseRing {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,.34), 0 12px 28px rgba(15,23,42,.2); }
+      50% { box-shadow: 0 0 0 12px rgba(37,211,102,0), 0 12px 28px rgba(15,23,42,.2); }
+    }
+
+    .shine {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .shine::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      transform: translateX(-120%);
+      background: linear-gradient(100deg, transparent 25%, rgba(255,255,255,.18), transparent 70%);
+      transition: transform .7s ease;
+      pointer-events: none;
+    }
+
+    .shine:hover::after { transform: translateX(120%); }
+
+    .map-frame {
+      filter: grayscale(.15) contrast(1.03);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-navy-950/95 backdrop-blur-md">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex min-h-[76px] items-center justify-between gap-5">
+        <a href="#home" class="flex min-w-0 items-center gap-3" aria-label="RYCON Civils & Electrical home">
+          <span class="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-gold/70 bg-white/5 text-gold">
+            <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 18V6h7.2c3.4 0 5.3 1.7 5.3 4.3 0 1.8-1 3.2-2.7 3.9L18.5 18h-4.1l-4-3.2H7.6V18H4Zm3.6-6.3h3.2c1.4 0 2.1-.5 2.1-1.5s-.7-1.5-2.1-1.5H7.6v3Z" fill="currentColor"/>
+              <path d="M17.1 6h2.9v12h-2.9V6Z" fill="currentColor" opacity=".7"/>
+            </svg>
+          </span>
+          <span class="min-w-0">
+            <span class="block truncate text-sm font-black tracking-wide text-white sm:text-base">RYCON</span>
+            <span class="block truncate text-[10px] font-semibold uppercase tracking-[.17em] text-slate-300 sm:text-[11px]">Civils & Electrical</span>
+          </span>
+        </a>
+
+        <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary navigation">
+          <a class="nav-link text-sm font-semibold text-slate-200 transition hover:text-gold" href="#home">Home</a>
+          <a class="nav-link text-sm font-semibold text-slate-200 transition hover:text-gold" href="#services">Services</a>
+          <a class="nav-link text-sm font-semibold text-slate-200 transition hover:text-gold" href="#safety">Safety Check</a>
+          <a class="nav-link text-sm font-semibold text-slate-200 transition hover:text-gold" href="#calculator">Calculator</a>
+          <a class="nav-link text-sm font-semibold text-slate-200 transition hover:text-gold" href="#contact">Contact</a>
+        </nav>
+
+        <div class="hidden items-center gap-2 md:flex">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="RYCON Facebook"
+             class="grid h-10 w-10 place-items-center rounded-lg border border-white/15 text-white transition hover:border-gold hover:text-gold">
+            <span class="font-bold">f</span>
+          </a>
+          <a href="tel:+27721165134" class="rounded-lg border border-white/15 px-3 py-2 text-xs font-bold text-white transition hover:border-gold hover:text-gold">
+            Call 072 116 5134
+          </a>
+          <a href="https://wa.me/27721165134" target="_blank" rel="noopener noreferrer"
+             class="cta-hover rounded-lg bg-gold px-4 py-2.5 text-xs font-black text-navy-950">
+            WhatsApp
+          </a>
+        </div>
+
+        <button id="menu-btn" type="button" class="grid h-11 w-11 place-items-center rounded-lg border border-white/15 text-white lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">
+          <svg id="menu-open-icon" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg id="menu-close-icon" class="hidden" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-white/10 py-4 lg:hidden">
+        <nav class="grid gap-1" aria-label="Mobile navigation">
+          <a href="#home" class="rounded-md px-3 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 hover:text-gold">Home</a>
+          <a href="#services" class="rounded-md px-3 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 hover:text-gold">Services</a>
+          <a href="#safety" class="rounded-md px-3 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 hover:text-gold">Safety Check</a>
+          <a href="#calculator" class="rounded-md px-3 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 hover:text-gold">Calculator</a>
+          <a href="#contact" class="rounded-md px-3 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 hover:text-gold">Contact</a>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="tel:+27721165134" class="rounded-lg border border-white/15 px-4 py-3 text-center text-xs font-bold text-white">Call</a>
+            <a href="https://wa.me/27721165134" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-gold px-4 py-3 text-center text-xs font-black text-navy-950">WhatsApp</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="section-anchor relative isolate overflow-hidden bg-navy-950 pt-32 text-white sm:pt-36">
+      <div class="absolute inset-0 hero-grid opacity-80"></div>
+      <div class="absolute -right-48 top-24 h-[520px] w-[520px] rounded-full bg-gold/10 blur-3xl"></div>
+      <div class="hero-overlay absolute inset-0"></div>
+
+      <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 sm:px-6 lg:grid-cols-[1.1fr_.9fr] lg:px-8 lg:pb-28">
+        <div class="hero-copy max-w-3xl">
+          <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-gold/35 bg-white/5 px-3 py-2 text-xs font-bold uppercase tracking-[.15em] text-gold">
+            <span class="h-2 w-2 rounded-full bg-gold"></span>
+            Construction • Solar • Electrical Specialists
+          </div>
+
+          <h1 class="text-4xl font-black leading-[.98] tracking-tight sm:text-6xl lg:text-7xl">
+            RYCON <span class="text-gold">CIVILS</span> &<br class="hidden sm:block"> ELECTRICAL
+          </h1>
+
+          <div class="mt-6 gold-rule"></div>
+
+          <p class="mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg">
+            Construction, Solar & Electrical Specialists delivering reliable, compliant and professional solutions for residential and commercial projects.
+          </p>
+
+          <div class="mt-7 flex flex-wrap gap-3">
+            <span class="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-sm font-bold text-gold">
+              <span aria-hidden="true">★</span> 5-Star Service
+            </span>
+            <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-bold text-white">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m12 3 7 3v5c0 4.5-2.8 8.2-7 10-4.2-1.8-7-5.5-7-10V6l7-3Z" stroke="currentColor" stroke-width="1.7"/><path d="m8.5 12 2.3 2.3 4.8-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Certified & Compliant
+            </span>
+          </div>
+
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#calculator" class="cta-hover shine inline-flex items-center justify-center gap-2 rounded-lg bg-gold px-6 py-3.5 text-sm font-black text-navy-950">
+              Calculate Rough Quote
+              <span aria-hidden="true">→</span>
+            </a>
+            <a href="https://wa.me/27721165134" target="_blank" rel="noopener noreferrer"
+               class="cta-hover inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-bold text-white hover:border-gold hover:text-gold">
+              WhatsApp Us Now
+            </a>
+          </div>
+
+          <p class="mt-5 text-xs font-medium text-slate-400">Reliable. Affordable. Always Professional.</p>
+        </div>
+
+        <div class="hero-panel rounded-2xl border border-white/10 bg-white/[.045] p-5 shadow-2xl backdrop-blur-sm sm:p-7">
+          <div class="border-b border-white/10 pb-5">
+            <p class="text-xs font-bold uppercase tracking-[.18em] text-gold">Built around compliance</p>
+            <h2 class="mt-2 text-2xl font-extrabold">Professional work. Clear communication. Safer properties.</h2>
+          </div>
+
+          <div class="mt-6 grid gap-4">
+            <div class="flex gap-4 rounded-xl border border-white/10 bg-black/10 p-4">
+              <div class="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-gold text-navy-950 font-black">01</div>
+              <div><h3 class="font-bold">Certified & Compliant</h3><p class="mt-1 text-sm leading-6 text-slate-400">Solutions designed around professional standards and compliance.</p></div>
+            </div>
+            <div class="flex gap-4 rounded-xl border border-white/10 bg-black/10 p-4">
+              <div class="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-white text-navy-950 font-black">02</div>
+              <div><h3 class="font-bold">Solar & Electrical</h3><p class="mt-1 text-sm leading-6 text-slate-400">From installations to maintenance, inspections and repairs.</p></div>
+            </div>
+            <div class="flex gap-4 rounded-xl border border-white/10 bg-black/10 p-4">
+              <div class="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-white/10 text-gold font-black">03</div>
+              <div><h3 class="font-bold">Residential & Commercial</h3><p class="mt-1 text-sm leading-6 text-slate-400">Practical project support for homes, businesses and developments.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="border-b border-slate-200 bg-white">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-slate-200 sm:grid-cols-4">
+        <div class="trust-item px-4 py-6 text-center sm:px-6">
+          <p class="text-lg font-black text-navy-900">5-Star</p><p class="mt-1 text-[11px] font-bold uppercase tracking-wider text-slate-500">Service</p>
+        </div>
+        <div class="trust-item px-4 py-6 text-center sm:px-6">
+          <p class="text-lg font-black text-navy-900">Compliant</p><p class="mt-1 text-[11px] font-bold uppercase tracking-wider text-slate-500">Work Focus</p>
+        </div>
+        <div class="trust-item px-4 py-6 text-center sm:px-6">
+          <p class="text-lg font-black text-navy-900">Solar</p><p class="mt-1 text-[11px] font-bold uppercase tracking-wider text-slate-500">Specialists</p>
+        </div>
+        <div class="trust-item px-4 py-6 text-center sm:px-6">
+          <p class="text-lg font-black text-navy-900">Electrical</p><p class="mt-1 text-[11px] font-bold uppercase tracking-wider text-slate-500">Specialists</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section-anchor bg-slate-50 py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="section-heading max-w-2xl">
+          <p class="text-xs font-black uppercase tracking-[.2em] text-gold">What we do</p>
+          <h2 class="mt-3 text-3xl font-black tracking-tight text-navy-950 sm:text-4xl">Core Services</h2>
+          <div class="mt-5 gold-rule"></div>
+          <p class="mt-5 leading-7 text-slate-600">Structured, practical services for construction, solar and electrical projects — with safety and compliance kept at the centre.</p>
+        </div>
+
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="service-card rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-start justify-between">
+              <div class="grid h-12 w-12 place-items-center rounded-lg bg-navy-900 text-gold">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none"><path d="m4 20 7-7m-4-5 4-4 9 9-4 4-9-9Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              </div>
+              <span class="text-xs font-black text-slate-300">01</span>
+            </div>
+            <h3 class="mt-6 text-xl font-extrabold text-navy-950">Construction Management</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Professional project coordination and construction support for residential and commercial work.</p>
+            <a href="#calculator" data-service="Construction Project" class="mt-6 inline-flex text-sm font-black text-navy-900 hover:text-gold">Request estimate →</a>
+          </article>
+
+          <article class="service-card rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-start justify-between">
+              <div class="grid h-12 w-12 place-items-center rounded-lg bg-navy-900 text-gold">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              </div>
+              <span class="text-xs font-black text-slate-300">02</span>
+            </div>
+            <h3 class="mt-6 text-xl font-extrabold text-navy-950">Solar Installations</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Solar installation solutions planned around your property's energy requirements and project scope.</p>
+            <a href="#calculator" data-service="Solar Installation" class="mt-6 inline-flex text-sm font-black text-navy-900 hover:text-gold">Request estimate →</a>
+          </article>
+
+          <article class="service-card rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-start justify-between">
+              <div class="grid h-12 w-12 place-items-center rounded-lg bg-navy-900 text-gold">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none"><path d="M12 3v5M12 16v5M4.9 4.9l3.5 3.5M15.6 15.6l3.5 3.5M3 12h5M16 12h5M4.9 19.1l3.5-3.5M15.6 8.4l3.5-3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.7"/></svg>
+              </div>
+              <span class="text-xs font-black text-slate-300">03</span>
+            </div>
+            <h3 class="mt-6 text-xl font-extrabold text-navy-950">Solar Repairs & Maintenance</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Troubleshooting, repairs and maintenance to keep existing solar systems operating reliably.</p>
+            <a href="#calculator" data-service="Solar Repair/Maintenance" class="mt-6 inline-flex text-sm font-black text-navy-900 hover:text-gold">Request estimate →</a>
+          </article>
+
+          <article class="service-card rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-start justify-between">
+              <div class="grid h-12 w-12 place-items-center rounded-lg bg-navy-900 text-gold">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none"><path d="M13 2 5 14h6l-1 8 8-12h-6l1-8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="text-xs font-black text-slate-300">04</span>
+            </div>
+            <h3 class="mt-6 text-xl font-extrabold text-navy-950">Electrical Installations</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Electrical installation work for new projects, upgrades and property improvements.</p>
+            <a href="#calculator" data-service="Electrical Installation" class="mt-6 inline-flex text-sm font-black text-navy-900 hover:text-gold">Request estimate →</a>
+          </article>
+
+          <article class="service-card rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-start justify-between">
+              <div class="grid h-12 w-12 place-items-center rounded-lg bg-navy-900 text-gold">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/></svg>
+              </div>
+              <span class="text-xs font-black text-slate-300">05</span>
+            </div>
+            <h3 class="mt-6 text-xl font-extrabold text-navy-950">Electrical Maintenance</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Maintenance and fault-finding support aimed at keeping electrical systems dependable.</p>
+            <a href="#calculator" data-service="Electrical Maintenance" class="mt-6 inline-flex text-sm font-black text-navy-900 hover:text-gold">Request estimate →</a>
+          </article>
+
+          <article class="service-card rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-start justify-between">
+              <div class="grid h-12 w-12 place-items-center rounded-lg bg-navy-900 text-gold">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none"><path d="M12 3 20 7v5c0 4.7-3.1 8-8 9-4.9-1-8-4.3-8-9V7l8-4Z" stroke="currentColor" stroke-width="1.7"/><path d="m8.3 12 2.3 2.3 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="text-xs font-black text-slate-300">06</span>
+            </div>
+            <h3 class="mt-6 text-xl font-extrabold text-navy-950">DB Board Inspections / Compliance</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Inspection and compliance-focused support for DB boards, including CoC audit requirements.</p>
+            <a href="#safety" class="mt-6 inline-flex text-sm font-black text-navy-900 hover:text-gold">Book safety check →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why choose -->
+    <section class="bg-white py-20 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[.8fr_1.2fr] lg:px-8">
+        <div class="section-heading">
+          <p class="text-xs font-black uppercase tracking-[.2em] text-gold">The RYCON standard</p>
+          <h2 class="mt-3 text-3xl font-black text-navy-950 sm:text-4xl">Why Choose RYCON?</h2>
+          <div class="mt-5 gold-rule"></div>
+          <p class="mt-5 max-w-lg leading-7 text-slate-600">A professional service approach built around reliability, clear scope, safety and compliant workmanship.</p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="why-item rounded-xl border border-slate-200 p-6">
+            <div class="flex gap-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-gold/15 text-gold">✓</span><div><h3 class="font-extrabold">Certified & Compliant Work</h3><p class="mt-2 text-sm leading-6 text-slate-600">A compliance-first approach for work where safety and documentation matter.</p></div></div>
+          </div>
+          <div class="why-item rounded-xl border border-slate-200 p-6">
+            <div class="flex gap-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-navy-900 text-gold">✓</span><div><h3 class="font-extrabold">Reliable & Professional</h3><p class="mt-2 text-sm leading-6 text-slate-600">Clear communication and professional project handling from enquiry to completion.</p></div></div>
+          </div>
+          <div class="why-item rounded-xl border border-slate-200 p-6">
+            <div class="flex gap-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-navy-900 text-gold">✓</span><div><h3 class="font-extrabold">Solar & Electrical Specialists</h3><p class="mt-2 text-sm leading-6 text-slate-600">One service partner for solar, electrical and supporting construction requirements.</p></div></div>
+          </div>
+          <div class="why-item rounded-xl border border-slate-200 p-6">
+            <div class="flex gap-4"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-gold/15 text-gold">✓</span><div><h3 class="font-extrabold">Local Service You Can Trust</h3><p class="mt-2 text-sm leading-6 text-slate-600">Practical service for customers who want responsive local support.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety -->
+    <section id="safety" class="section-anchor bg-navy-950 py-16 text-white sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="safety-callout relative overflow-hidden rounded-2xl border border-gold/30 bg-navy-800 p-7 sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
+          <div class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-gold/10 blur-3xl"></div>
+          <div class="relative max-w-3xl">
+            <div class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[.18em] text-gold">
+              <span class="h-2 w-2 rounded-full bg-gold"></span> Safety & Compliance Check
+            </div>
+            <h2 class="mt-4 text-3xl font-black leading-tight sm:text-4xl">Fake Certificates = Real Danger!</h2>
+            <p class="mt-3 text-lg font-semibold text-slate-200">Is your DB Board safe? Don't risk it.</p>
+            <p class="mt-4 max-w-2xl text-sm leading-6 text-slate-400">If you're unsure about the condition or compliance of your electrical installation, arrange a professional DB board inspection / CoC audit.</p>
+          </div>
+          <a href="#calculator" data-service="DB Board Inspection/Compliance"
+             class="cta-hover relative mt-7 inline-flex shrink-0 items-center justify-center rounded-lg bg-gold px-6 py-3.5 text-sm font-black text-navy-950 lg:mt-0">
+            Book DB Board Inspection / CoC Audit
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calculator" class="section-anchor bg-slate-50 py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <p class="text-xs font-black uppercase tracking-[.2em] text-gold">Fast project planning</p>
+          <h2 class="mt-3 text-3xl font-black text-navy-950 sm:text-4xl">Rough Quote Calculator</h2>
+          <div class="mt-5 gold-rule"></div>
+          <p class="mt-5 leading-7 text-slate-600">Use the calculator for an initial planning range. The final price depends on site conditions, scope, equipment, materials and compliance requirements.</p>
+        </div>
+
+        <div class="mt-12 grid gap-8 lg:grid-cols-[1.05fr_.95fr]">
+          <form id="quote-form" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8" novalidate>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="sm:col-span-1">
+                <label for="customerName" class="mb-2 block text-sm font-bold text-navy-900">Customer Name *</label>
+                <input id="customerName" name="customerName" required type="text" placeholder="Your name" class="input-field w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 placeholder:text-slate-400">
+              </div>
+              <div>
+                <label for="customerPhone" class="mb-2 block text-sm font-bold text-navy-900">Phone / WhatsApp *</label>
+                <input id="customerPhone" name="customerPhone" required type="tel" placeholder="e.g. 072 000 0000" class="input-field w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 placeholder:text-slate-400">
+              </div>
+
+              <div>
+                <label for="propertyType" class="mb-2 block text-sm font-bold text-navy-900">Property Type *</label>
+                <select id="propertyType" name="propertyType" class="input-field w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900">
+                  <option value="Residential">Residential</option>
+                  <option value="Commercial">Commercial</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="service" class="mb-2 block text-sm font-bold text-navy-900">Service *</label>
+                <select id="service" name="service" class="input-field w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900">
+                  <option value="Solar Installation">Solar Installation</option>
+                  <option value="Solar Repair/Maintenance">Solar Repair/Maintenance</option>
+                  <option value="Electrical Installation">Electrical Installation</option>
+                  <option value="Electrical Maintenance">Electrical Maintenance</option>
+                  <option value="DB Board Inspection/Compliance">DB Board Inspection/Compliance</option>
+                  <option value="Construction Project">Construction Project</option>
+                </select>
+              </div>
+
+              <div class="sm:col-span-2">
+                <label for="scope" class="mb-2 block text-sm font-bold text-navy-900">Project Details / Scope</label>
+                <textarea id="scope" name="scope" rows="4" placeholder="e.g. 3-phase property, approximate system size, number of DB boards, rooms, construction scope..." class="input-field w-full resize-y rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 placeholder:text-slate-400"></textarea>
+              </div>
+            </div>
+
+            <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+              <button type="submit" class="cta-hover shine inline-flex flex-1 items-center justify-center gap-2 rounded-lg bg-navy-900 px-5 py-3.5 text-sm font-black text-white hover:bg-navy-800">
+                Send Quote Estimate to WhatsApp →
+              </button>
+              <button type="reset" class="rounded-lg border border-slate-300 px-5 py-3.5 text-sm font-bold text-slate-700 transition hover:border-navy-900 hover:text-navy-900">Reset</button>
+            </div>
+            <p id="form-error" class="mt-3 hidden text-sm font-semibold text-red-600"></p>
+          </form>
+
+          <aside class="rounded-2xl bg-navy-950 p-7 text-white shadow-navy sm:p-8">
+            <p class="text-xs font-black uppercase tracking-[.18em] text-gold">Live estimate</p>
+            <h3 class="mt-3 text-2xl font-black">Planning Range</h3>
+            <div class="mt-6 rounded-xl border border-white/10 bg-white/5 p-6">
+              <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Estimated range</p>
+              <p id="estimate" class="mt-2 text-4xl font-black text-gold">R 8,000 – R 15,000</p>
+              <p id="estimate-note" class="mt-3 text-sm leading-6 text-slate-400">Select a service to update the planning range.</p>
+            </div>
+
+            <div class="mt-6 space-y-4 text-sm text-slate-300">
+              <div class="flex justify-between gap-5 border-b border-white/10 pb-3"><span>Property</span><strong id="summary-property" class="text-white">Residential</strong></div>
+              <div class="flex justify-between gap-5 border-b border-white/10 pb-3"><span>Service</span><strong id="summary-service" class="text-right text-white">Solar Installation</strong></div>
+              <div class="flex justify-between gap-5"><span>Estimate type</span><strong class="text-white">Rough planning range</strong></div>
+            </div>
+
+            <div class="mt-7 border-l-2 border-gold pl-4 text-xs leading-5 text-slate-400">
+              Estimates are indicative only and are not a binding quotation. A site assessment and confirmed scope may change the final price.
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact + Map -->
+    <section id="contact" class="section-anchor bg-white py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 lg:grid-cols-[.85fr_1.15fr]">
+          <div class="p-7 sm:p-9">
+            <p class="text-xs font-black uppercase tracking-[.2em] text-gold">Contact RYCON</p>
+            <h2 class="mt-3 text-3xl font-black text-navy-950">Let's discuss your project.</h2>
+            <div class="mt-5 gold-rule"></div>
+            <p class="mt-5 text-sm leading-6 text-slate-600">For a detailed quote, send your project scope through WhatsApp or contact RYCON directly.</p>
+
+            <div class="mt-8 space-y-5">
+              <a href="tel:+27721165134" class="flex items-start gap-4 group">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-navy-900 text-gold">☎</span>
+                <span><span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Call / WhatsApp</span><span class="mt-1 block font-extrabold text-navy-900 group-hover:text-gold">072 116 5134</span></span>
+              </a>
+              <div class="flex items-start gap-4">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-navy-900 text-gold">◷</span>
+                <span><span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Hours</span><span class="mt-1 block font-extrabold text-navy-900">Contact for current availability</span></span>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-navy-900 text-gold">⌖</span>
+                <span><span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Service Region</span><span class="mt-1 block font-extrabold text-navy-900">Residential & commercial projects</span></span>
+              </div>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="https://wa.me/27721165134" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-gold px-5 py-3 text-sm font-black text-navy-950">WhatsApp RYCON</a>
+              <a href="tel:+27721165134" class="rounded-lg border border-slate-300 px-5 py-3 text-sm font-bold text-navy-900">Call Now</a>
+            </div>
+          </div>
+
+          <div class="min-h-[360px] bg-slate-200 lg:min-h-full">
+            <iframe
+              class="map-frame h-full min-h-[360px] w-full border-0"
+              title="Google Map showing Durban, KwaZulu-Natal service region"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Durban%2C%20KwaZulu-Natal%2C%20South%20Africa&output=embed">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/27721165134" target="_blank" rel="noopener noreferrer"
+     class="fab-pulse fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-lg sm:bottom-7 sm:right-7"
+     aria-label="Chat with RYCON on WhatsApp">
+    <svg width="27" height="27" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M20 11.6a8 8 0 0 1-11.8 7.1L4 20l1.4-4A8 8 0 1 1 20 11.6Z" stroke="currentColor" stroke-width="1.7"/>
+      <path d="M8.8 8.7c.2-.4.4-.4.7-.4h.4c.2 0 .3.1.4.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.1.1-.1.3 0 .5.5.9 1.2 1.5 2.1 1.9.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.2.3.4 0 .4-.2 1.1-.5 1.3-.4.4-1.1.5-1.6.4-1-.2-2.1-.8-3.1-1.6-.9-.7-1.7-1.6-2.2-2.5-.5-.8-.8-1.7-.7-2.3.1-.4.4-1 .8-1.3Z" fill="currentColor"/>
+    </svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="bg-navy-950 text-white">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid gap-10 md:grid-cols-[1.4fr_.7fr_.8fr]">
+        <div>
+          <div class="flex items-center gap-3">
+            <span class="grid h-11 w-11 place-items-center rounded-lg border border-gold/60 text-gold font-black">R</span>
+            <div><p class="font-black">RYCON Civils & Electrical</p><p class="text-xs text-slate-400">Construction • Solar • Electrical Specialists</p></div>
+          </div>
+          <p class="mt-5 max-w-md text-sm leading-6 text-slate-400">Reliable, affordable and professional solutions for residential and commercial projects.</p>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 rounded-lg border border-white/15 px-4 py-2.5 text-sm font-bold text-white hover:border-gold hover:text-gold">Facebook <span>↗</span></a>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-black uppercase tracking-wider text-gold">Quick Links</h3>
+          <div class="mt-4 grid gap-2 text-sm text-slate-400">
+            <a href="#home" class="hover:text-white">Home</a>
+            <a href="#services" class="hover:text-white">Services</a>
+            <a href="#safety" class="hover:text-white">Safety Check</a>
+            <a href="#calculator" class="hover:text-white">Calculator</a>
+            <a href="#contact" class="hover:text-white">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-black uppercase tracking-wider text-gold">Get in touch</h3>
+          <div class="mt-4 grid gap-3 text-sm text-slate-400">
+            <a href="tel:+27721165134" class="hover:text-white">072 116 5134</a>
+            <a href="https://wa.me/27721165134" target="_blank" rel="noopener noreferrer" class="hover:text-white">WhatsApp RYCON</a>
+            <span>Residential & Commercial</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 border-t border-white/10 pt-6">
+        <p class="text-xs leading-5 text-slate-500">
+          Disclaimer: The rough quote calculator provides indicative planning ranges only and does not constitute a final quotation. Final pricing is subject to confirmed scope, site conditions, materials, equipment, labour and applicable compliance requirements.
+        </p>
+        <div class="mt-5 flex flex-col gap-2 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <span>© <span id="year"></span> RYCON Civils & Electrical. All rights reserved.</span>
+          <span>Reliable. Affordable. Always Professional.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const WA_NUMBER = "27721165134";
+
+      // Mobile navigation
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const openIcon = document.getElementById("menu-open-icon");
+      const closeIcon = document.getElementById("menu-close-icon");
+
+      menuBtn.addEventListener("click", () => {
+        const isOpen = menuBtn.getAttribute("aria-expanded") === "true";
+        menuBtn.setAttribute("aria-expanded", String(!isOpen));
+        mobileMenu.classList.toggle("hidden", isOpen);
+        openIcon.classList.toggle("hidden", !isOpen);
+        closeIcon.classList.toggle("hidden", isOpen);
+      });
+
+      document.querySelectorAll("#mobile-menu a").forEach(link => {
+        link.addEventListener("click", () => {
+          menuBtn.setAttribute("aria-expanded", "false");
+          mobileMenu.classList.add("hidden");
+          openIcon.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
+        });
+      });
+
+      // Service shortcuts
+      document.querySelectorAll("[data-service]").forEach(link => {
+        link.addEventListener("click", () => {
+          const service = link.dataset.service;
+          const select = document.getElementById("service");
+          if (select && [...select.options].some(o => o.value === service)) {
+            select.value = service;
+            select.dispatchEvent(new Event("change"));
+          }
+        });
+      });
+
+      // Quote calculator
+      const service = document.getElementById("service");
+      const property = document.getElementById("propertyType");
+      const estimate = document.getElementById("estimate");
+      const estimateNote = document.getElementById("estimate-note");
+      const summaryProperty = document.getElementById("summary-property");
+      const summaryService = document.getElementById("summary-service");
+      const form = document.getElementById("quote-form");
+      const formError = document.getElementById("form-error");
+
+      const baseRanges = {
+        "Solar Installation": { min: 25000, max: 120000, note: "Indicative range for solar installation; system size, equipment and installation complexity can materially change the final cost." },
+        "Solar Repair/Maintenance": { min: 1800, max: 12000, note: "Indicative range for solar diagnostics, repairs and maintenance; replacement components are scope dependent." },
+        "Electrical Installation": { min: 3500, max: 30000, note: "Indicative range for electrical installation work; final pricing depends on points, circuits, phases and site conditions." },
+        "Electrical Maintenance": { min: 1500, max: 10000, note: "Indicative range for maintenance and fault-finding; the actual scope is confirmed after assessment." },
+        "DB Board Inspection/Compliance": { min: 950, max: 4500, note: "Indicative inspection/compliance range; corrective work and certification requirements may add to the final amount." },
+        "Construction Project": { min: 15000, max: 250000, note: "Indicative construction planning range only; materials, size, specification and project complexity determine final pricing." }
+      };
+
+      function formatRand(value) {
+        return "R " + Math.round(value).toLocaleString("en-ZA");
+      }
+
+      function updateEstimate() {
+        const selected = baseRanges[service.value] || baseRanges["Solar Installation"];
+        const multiplier = property.value === "Commercial" ? 1.35 : 1;
+        const min = selected.min * multiplier;
+        const max = selected.max * multiplier;
+
+        estimate.textContent = `${formatRand(min)} – ${formatRand(max)}`;
+        estimateNote.textContent = selected.note;
+        summaryProperty.textContent = property.value;
+        summaryService.textContent = service.value;
+      }
+
+      service.addEventListener("change", updateEstimate);
+      property.addEventListener("change", updateEstimate);
+      updateEstimate();
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        formError.classList.add("hidden");
+
+        const customerName = document.getElementById("customerName").value.trim();
+        const customerPhone = document.getElementById("customerPhone").value.trim();
+        const scope = document.getElementById("scope").value.trim();
+
+        if (!customerName || !customerPhone) {
+          formError.textContent = "Please enter your name and phone number before sending the estimate.";
+          formError.classList.remove("hidden");
+          return;
+        }
+
+        const range = estimate.textContent;
+        const message = [
+          "RYCON Civils & Electrical — Rough Quote Request",
+          "",
+          `Customer Name: ${customerName}`,
+          `Phone / WhatsApp: ${customerPhone}`,
+          `Property Type: ${property.value}`,
+          `Service: ${service.value}`,
+          `Rough Planning Range: ${range}`,
+          `Project Details / Scope: ${scope || "Not provided"}`,
+          "",
+          "Please contact me to discuss the project and confirm the scope.",
+          "",
+          "Note: I understand this is an indicative estimate and not a final quotation."
+        ].join("\n");
+
+        const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank", "noopener,noreferrer");
+      });
+
+      form.addEventListener("reset", () => {
+        window.setTimeout(updateEstimate, 0);
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // GSAP / ScrollTrigger
+      if (window.gsap && window.ScrollTrigger) {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!reduceMotion) {
+          gsap.from(".hero-copy > *", {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power2.out",
+            delay: 0.15
+          });
+
+          gsap.from(".hero-panel", {
+            opacity: 0,
+            y: 30,
+            duration: 0.9,
+            ease: "power2.out",
+            delay: 0.3
+          });
+
+          const revealGroups = [
+            ".section-heading",
+            ".service-card",
+            ".why-item",
+            ".safety-callout",
+            "#quote-form",
+            "#calculator aside",
+            "#contact > div"
+          ];
+
+          revealGroups.forEach(selector => {
+            gsap.utils.toArray(selector).forEach((el, index) => {
+              gsap.from(el, {
+                scrollTrigger: {
+                  trigger: el,
+                  start: "top 86%",
+                  once: true
+                },
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                delay: selector === ".service-card" ? (index % 3) * 0.07 : 0,
+                ease: "power2.out"
+              });
+            });
+          });
+
+          gsap.to(".gold-rule", {
+            scrollTrigger: {
+              trigger: ".gold-rule",
+              start: "top 90%",
+              once: true
+            },
+            width: 88,
+            duration: 0.7,
+            ease: "power2.out"
+          });
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
